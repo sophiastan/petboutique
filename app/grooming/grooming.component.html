@@ -1,0 +1,92 @@
+<div class="container">
+    <!-- <form novalidate #form="ngForm" (submit)="submit()"> -->
+    <form>
+        <h1>Grooming Salon</h1>
+        <h4>Book an appointment</h4>
+        <hr>
+
+        <h3>Pet Details</h3>
+        <div class="form-group">
+            <label for="inputName">Pet Name</label><br>
+            <input type="text" class="form-control" name="petName" placeHolder="Pet Name" [(ngModel)]="pet.petName" required>
+        </div>
+        <!-- <div class="form-group">
+            <label for="type">Type</label><br>
+                <input type="radio" name="type" value="dog" [(ngModel)]="pet.type"> Dog <br>
+                <input type="radio" name="type" value="cat" [(ngModel)]="pet.type"> Cat <br>
+        </div> -->
+        <div class="form-group">
+            <label for="birthday">Pet Birthday</label><br>
+            <input type="date" name="bday" [(ngModel)]="pet.bday" required>
+        </div>
+        <!-- <div class="form-group">
+            <label for="gender">Gender</label><br>
+            <select name="gender" [(ngModel)]="pet.gender" required>
+                <option value="male-neutered" name="male-neutered">Male-neutered</option>
+                <option value="male-not neutered" name="male-not neutered">Male-not neutered</option>
+                <option value="female-spayed" name="female-spayed">Female-spayed</option>
+                <option value="female-not spayed" name="female-not spayed">Female-not spayed</option>
+            </select>
+        </div>-->
+        <div class="form-group">
+            <label for="breed">Breed</label><br>
+            <input type="text" name="breed" placeholder="Golden Retriever" [(ngModel)]="pet.breed" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight</label><br>
+            <input type="number" name="weight" placeholder="Enter weight" [(ngModel)]="pet.weight" required>
+        </div>
+        <div class="form-group">
+            <label for="color">Color (optional)</label><br>
+            <input type="text" name="color" placeholder="Gold" [(ngModel)]="pet.color">
+        </div>
+        <div class="form-group">
+            <label for="customerEmail">Customer Email</label> <br>
+            <input type="email" name="customerEmail" placeholder="Enter Email" [(ngModel)]="customerEmail">
+        </div>
+        <div class="form-group">
+            <label for="Document Name">Document Name</label> <br>
+            <input type="text" name="documentName" placeholder="Enter Document Name" [(ngModel)]="docName">
+        </div>
+
+        <button type="button" class="btn btn-success" (click)="test()">Send Agreement</button> <br>
+        
+
+        <!-- <hr>
+        <h3>Choose a Service</h3>
+        <div class="form-group">
+            <div class="checkbox" required>
+                <label><input type="checkbox" value="nail trim"> Nail Trim: $10</label><br>
+                <label><input type="checkbox" value="teeth cleaning"> Teeth Cleaning: $7</label><br>
+                <label><input type="checkbox" value="bath/full haircut"> Bath & Full Haircut: $60</label><br>
+                <label><input type="checkbox" value="bath/full haircut/nail trim"> Bath, Full Haircut, & Nail Trim: $70</label><br>
+                <label><input type="checkbox" value="bath/full haircut/nail trim/teeth cleaning"> Bath, Full Haircut, Nail Trim, & Teeth Cleaning: $75</label><br>
+            </div>
+        </div>
+
+        <hr>
+        <h3>Choose a Date & Time</h3>
+        <div class="form-group">
+            <label for="date and time">(Date and Time)</label><br>
+            <input type="datetime-local" name="datetime">
+        </div> 
+
+        <hr>
+        <h3>Contact Information</h3>
+        <div class="form-group">
+            <label for="name">Contact Name</label><br>
+            <input type="text" name="name" placeholder="Full name of pet owner(s)">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" name="phone" placeholder="Enter phone number">
+        </div> -->
+
+        <hr> 
+        <div class="form-group">
+            <label for="file">Select Agreement</label><br>
+            <input type="file" id="inputFile" (change)="handleFileInput($event.target.files)">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="uploadFile()">Upload File</button> <br><br>
+    </form>
+</div> 
